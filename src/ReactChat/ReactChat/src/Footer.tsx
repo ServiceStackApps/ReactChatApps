@@ -106,7 +106,7 @@ export class Footer extends React.Component<any, any> {
                     onChange={e => this.handleChange(e)}
                     onKeyDown={e => this.handleKeyDown(e)}
                     onKeyUp={e => this.handleKeyUp(e)} />
-                <button id="btnSend" style={{ marginLeft: 5 }} onClick={this.postMsg}>Send</button>
+                <button id="btnSend" style={{ marginLeft: 5 }} onClick={e => this.postMsg() }>Send</button>
             </div>
         );
     }

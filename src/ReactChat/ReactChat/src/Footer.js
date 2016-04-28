@@ -107,7 +107,7 @@ System.register(["react", './utils'], function(exports_1, context_1) {
                 };
                 Footer.prototype.render = function () {
                     var _this = this;
-                    return (React.createElement("div", {id: "bottom"}, React.createElement("input", {ref: "txtMsg", id: "txtMsg", type: "text", value: this.props.value, onChange: function (e) { return _this.handleChange(e); }, onKeyDown: function (e) { return _this.handleKeyDown(e); }, onKeyUp: function (e) { return _this.handleKeyUp(e); }}), React.createElement("button", {id: "btnSend", style: { marginLeft: 5 }, onClick: this.postMsg}, "Send")));
+                    return (React.createElement("div", {id: "bottom"}, React.createElement("input", {ref: "txtMsg", id: "txtMsg", type: "text", value: this.props.value, onChange: function (e) { return _this.handleChange(e); }, onKeyDown: function (e) { return _this.handleKeyDown(e); }, onKeyUp: function (e) { return _this.handleKeyUp(e); }}), React.createElement("button", {id: "btnSend", style: { marginLeft: 5 }, onClick: function (e) { return _this.postMsg(); }}, "Send")));
                 };
                 Footer = __decorate([
                     utils_1.reduxify(function (state) { return ({
