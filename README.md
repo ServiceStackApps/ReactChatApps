@@ -426,4 +426,4 @@ This Gulp task uses the same conventions as those found in the AngularJS and Rea
 
 If you are using **Github's default Visual Studio ignore, this file will not be included in source control** due to the default rule of `publish/` to be ignored. You should check your Git Repository `.gitignore` rules before committing any potentially sensitive information into public source control.
 
-This task shows a quick way of updating your development server quickly after making changes to your application. For more information on use web-deploy using either Gulp or just Visual Studio publish, see '[WebDeploy with AWS](https://github.com/ServiceStack/ServiceStack/wiki/WebDeploy-with-AWS#deploy-using-grunt)'.
+This task shows a quick way of updating your development server quickly after making changes to your application. For more information on use web-deploy using either Gulp or just Visual Studio publish, see [WebDeploy with AWS](https://github.com/ServiceStack/ServiceStack/wiki/Simple-Deployments-to-AWS-with-WebDeploy).
