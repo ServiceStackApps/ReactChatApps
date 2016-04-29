@@ -362,10 +362,9 @@ COPY /Y .\%STAGING%\%OUTPUTNAME% .\apps\
 ## 03-package-winforms
 This task also performs `01-build-all` as well restoring NuGet packages and building the **AppWinForms** project. Once the project resources are ready, it uses [Squirrel.Windows](https://github.com/Squirrel/Squirrel.Windows) to package your application into a Windows installer `Setup.exe` and places it in `wwwroot_build/apps`. The resultant `Setup.exe` and related NuGet package files are used to handle installation and updating client application.
 
-#### Updating
-The template is already setup to easily enable auto updates for your application using Squirrel.Windows and GitHub Releases. 
+[![](https://raw.githubusercontent.com/ServiceStack/Assets/master/img/servicestackvs/Squirrel-Logo.png)](https://github.com/Squirrel/Squirrel.Windows)
 
-Once you've created a project from the React Desktop Apps template, we need to change two pieces of config within the `App.config` in the **Host.AppWinForms** project, specifically `EnableAutoUpdate` to **true** and `UpdateManagerUrl` to your **GitHub project URL** (exclude the trailing slash).
+The template is already setup to easily enable auto updates for your application using Squirrel.Windows and GitHub Releases. Once you've created a project from the React Desktop Apps template, we need to change two pieces of config within the `App.config` in the **Host.AppWinForms** project, specifically `EnableAutoUpdate` to **true** and `UpdateManagerUrl` to your **GitHub project URL** (exclude the trailing slash).
 
 ``` xml
 <configuration>
