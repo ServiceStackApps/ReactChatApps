@@ -189,8 +189,8 @@ namespace ReactChat.AppWinForms
                 formMain.InvokeOnUiThreadIfRequired(() =>
                 {
                     formMain.Close();
+                    UpdateManager.RestartApp();
                 });
-                UpdateManager.RestartApp();
             });
         }
     }

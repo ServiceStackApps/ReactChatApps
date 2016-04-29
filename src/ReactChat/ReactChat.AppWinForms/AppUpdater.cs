@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using ServiceStack;
 using ServiceStack.Configuration;
@@ -44,9 +45,15 @@ namespace ReactChat.AppWinForms
             // see https://github.com/Squirrel/Squirrel.Windows/blob/master/docs/using/debugging-updates.md#updateexe-not-found
             if (!File.Exists("..\\Update.exe"))
             {
-                File.Copy(
-                    "..\\..\\..\\..\\..\\packages\\squirrel.windows.1.2.5\\tools\\Squirrel.exe".MapHostAbsolutePath(),
-                    "..\\Update.exe");
+                var squirrelExe = Directory.GetFiles(
+                    "..\\..\\..\\..\\..\\packages\\", "Squirrel.exe", SearchOption.AllDirectories)
+                    .ToList().FirstNonDefault();
+                if (squirrelExe != null)
+                {
+                    File.Copy(
+                     squirrelExe.MapHostAbsolutePath(),
+                     "..\\Update.exe");
+                }
             }
 #endif
             try
