@@ -380,13 +380,13 @@ To package the Windows application we can use a preconfigured Gulp task called *
 
 ```
 MyReactApp
-\_ wwwroot_build
-  \_ apps
-    \_ winforms-installer
-      \_ Releases
-        \_ MyReactApp-1.0.0.0-full.nupkg
-        \_ RELEASES
-        \_ Setup.exe 
+\wwwroot_build
+  \apps
+    \winforms-installer
+      \Releases
+        \MyReactApp-1.0.0.0-full.nupkg
+        \RELEASES
+        \Setup.exe 
 ```
 
 To publish your initial version to GitHub, create a [Release in GitHub](https://help.github.com/articles/creating-releases/) and upload these 3 files in your releases folder.
