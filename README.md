@@ -272,17 +272,20 @@ To provide an easy way to copy files to `wwwroot` and `Resources` project, eg im
 - `afterReplace` - find replace object array expecting `from` and `to` properties. Uses `gulpReplace`.
 
 ``` JavaScript
+var argv = require('yargs').argv;
 var WEB = 'web';
 var NATIVE = 'native';
+
+var webBuildDir = argv.serviceStackSettingsDir || './wwwroot_build/';
 
 var COPY_FILES = [
     { src: './bin/**/*', dest: 'bin/', host: WEB },
     { src: './img/**/*', dest: 'img/' },
     { src: './App_Data/**/*', dest: 'App_Data/', host: WEB },
     { src: './Global.asax', host: WEB },
-    { src: './bower_components/bootstrap/dist/fonts/*.*', dest: 'lib/fonts/' },
-    { src: './platform.js', dest: 'js/', host: WEB },
-    { src: './wwwroot_build/deploy/*.*', host: WEB },
+    { src: './jspm_packages/npm/bootstrap@3.2.0/dist/fonts/*.*', dest: 'lib/fonts/' },
+    { src: ['./config.js', './platform.js', './platform.css'], dest: '/', host: WEB },
+    { src: webBuildDir + 'deploy/*.*', host: WEB },
     {
         src: './web.config',
         host: [WEB],
