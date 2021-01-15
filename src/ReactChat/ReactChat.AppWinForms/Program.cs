@@ -22,15 +22,16 @@ namespace ReactChat.AppWinForms
         [STAThread]
         static void Main()
         {
-            AppHost = new AppHost();
             SquirrelAwareApp.HandleEvents(
                 OnInitialInstall,
                 OnAppUpdate,
                 onAppUninstall: OnAppUninstall,
                 onFirstRun: OnFirstRun);
 
+            AppHost = new AppHost();
+
             Cef.EnableHighDPISupport();
-            Cef.Initialize(new CefSettings());
+            Cef.Initialize(new CefSettings ());
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -41,7 +42,7 @@ namespace ReactChat.AppWinForms
                 "ServiceStack SelfHost listening at {0} ".Fmt(HostUrl).Print();
                 Form = new FormMain();
             }
-            catch
+            catch (Exception e)
             {
                 "Listening to existing service at {0}".Print(HostUrl);
                 Form = new FormMain(startRight: true);
