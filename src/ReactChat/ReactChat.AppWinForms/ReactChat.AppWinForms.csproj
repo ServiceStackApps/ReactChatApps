@@ -123,7 +123,7 @@
   <ItemGroup>
     <PackageReference Include="cef.redist.x64" Version="3.2526.1362" />
     <PackageReference Include="cef.redist.x86" Version="3.2526.1362" />
-    <PackageReference Include="CefSharp.Common" Version="47.0.3" />
+    <PackageReference Include="CefSharp.Common" Version="86.0.241" />
     <PackageReference Include="CefSharp.WinForms" Version="47.0.3" />
     <PackageReference Include="DeltaCompressionDotNet" Version="1.0.0" />
     <PackageReference Include="Mono.Cecil" Version="0.9.6.1" />
