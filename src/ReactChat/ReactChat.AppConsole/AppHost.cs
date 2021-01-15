@@ -48,8 +48,6 @@ namespace ReactChat.AppConsole
                 EmbeddedResourceBaseTypes = { typeof(AppHost), typeof(SharedEmbeddedResources) }
             });
 
-            JsConfig.EmitCamelCaseNames = true;
-
             Plugins.Add(new ServerEventsFeature());
 
             SetConfig(new HostConfig
@@ -57,6 +55,7 @@ namespace ReactChat.AppConsole
                 DebugMode = AppSettings.Get("DebugMode", false),
                 DefaultContentType = MimeTypes.Json,
                 AddRedirectParamsToQueryString = true,
+                UseCamelCase = true,
             });
 
             CustomErrorHttpHandlers.Remove(HttpStatusCode.Forbidden);
